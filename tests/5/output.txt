@@ -1,0 +1,7 @@
+Filled container:
+Container contains 5 elements.
+1: It is Triangle. A-point: x = -10, y = 8. B-point: x = -8, y = 2. C-point: x = -7, y = 4. Perimeter = 13.560623. Color: green
+2: It is Circle. Center: x = -6, y = 6. Radius: r = 6. Perimeter = 37.699112. Color: purple
+3: It is Circle. Center: x = -4, y = 6. Radius: r = 4. Perimeter = 25.132741. Color: red
+4: It is Circle. Center: x = -5, y = 3. Radius: r = 2. Perimeter = 12.566371. Color: red
+5: It is Triangle. A-point: x = 5, y = 5. B-point: x = 1, y = 4. C-point: x = -10, y = 8. Perimeter = 31.124864. Color: orange
