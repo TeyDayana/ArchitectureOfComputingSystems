@@ -1,7 +1,0 @@
-Filled container:
-Container contains 5 elements.
-1: It is Triangle. A-point: x = 1, y = 1. B-point: x = 2, y = 4. C-point: x = -8, y = 10. Perimeter = 27.552104. Color: yellow
-2: It is Rectangle. Left top point: x = 2, y = 4. Right bottom point: x = -8, y = 10. Perimeter = 32.000000. Color: red
-3: It is Rectangle. Left top point: x = 2, y = -8. Right bottom point: x = 1, y = -10. Perimeter = 6.000000. Color: orange
-4: It is Triangle. A-point: x = -8, y = 2. B-point: x = -10, y = -20. C-point: x = 10, y = 1. Perimeter = 69.118478. Color: green
-5: It is Circle. Center: x = -10, y = -20. Radius: r = 10. Perimeter = 62.831853. Color: purple
