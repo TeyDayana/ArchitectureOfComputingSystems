@@ -1,0 +1,3 @@
+Arithmetic mean: 39.500487
+Perimeteres processed:
+69.118478   62.831853   27.552104   32.000000   6.000000   
