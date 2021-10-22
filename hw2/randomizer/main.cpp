@@ -4,10 +4,13 @@
 #include <cmath>
 #include "stdio.h"
 
+// Файл для записи сгенерированных входных данных.
 FILE *file_;
+// запись данных для прямоугольника, треугольника, круга
 void writeRectangleData();
 void writeTriangleData();
 void writeCircleData();
+// случайное число в пределах заданного диапазона.
 int getRandomNumber(int min, int max);
 
 int main(int argc, char* argv[]) {
@@ -49,6 +52,7 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
+// Запись корректных координат вершин прямоугольника.
 void writeRectangleData() {
     int x_l_t, y_l_t, x_r_b, y_r_b;
     x_l_t = getRandomNumber(-20, 20);
@@ -64,6 +68,7 @@ void writeRectangleData() {
     fprintf(file_, "%d %d %d %d ", x_l_t, y_l_t, x_r_b, y_r_b);
 }
 
+// Запись корректных координат вершин треугольника.
 void writeTriangleData() {
     int x_1, y_1, x_2, y_2, x_3, y_3;
     double a, b, c, x, y;
@@ -90,6 +95,7 @@ void writeTriangleData() {
     fprintf(file_, "%d %d %d %d %d %d ", x_1, y_1, x_2, y_2, x_3, y_3);
 }
 
+// Запись корректных координаты вершины центра круга и его радиуса.
 void writeCircleData() {
     int x_c, y_c, r;
     x_c = getRandomNumber(-20, 20);
@@ -98,6 +104,7 @@ void writeCircleData() {
     fprintf(file_, "%d %d %d ", x_c, y_c, r);
 }
 
+// получение случайного числа от min до max включительно
 int getRandomNumber(int min, int max) {
     return rand() % (max - min + 1) + min;
 }
