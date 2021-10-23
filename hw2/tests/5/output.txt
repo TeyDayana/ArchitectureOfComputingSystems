@@ -1,0 +1,5 @@
+Filled container:
+Container contains 3 elements.
+1: It is Circle. Center: x = 0, y = 0. Radius: r = -1. Perimeter = -6.283185. Color: green
+2: It is Triangle. A-point: x = 0, y = 0. B-point: x = 0, y = 1. C-point: x = 0, y = -1. Perimeter = 4.000000. Color: green
+3: It is Rectangle. Left top point: x = -1, y = -1. Right bottom point: x = -1, y = -1. Perimeter = 0.000000. Color: green
