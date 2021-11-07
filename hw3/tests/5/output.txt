@@ -1,0 +1,4 @@
+Container is store 3 shapes:
+Circle: (center) x = 0  y = 0, r = -1. Perimeter = -6.283185307179586. Color is green
+Triangle: x1 = 0  y1 = 0, x2 = 0  y2 = 1, x3 = 0  y3 = -1. Perimeter = 4.0. Color is green
+Rectangle: x (top left) = -1  y (top left) = -1, x (bottom right) = -1  y (bottom right) = -1. Perimeter = 0.0. Color is green
