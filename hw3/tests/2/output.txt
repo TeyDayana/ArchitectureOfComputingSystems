@@ -1,0 +1,5 @@
+Container is store 4 shapes:
+Rectangle: x (top left) = -8  y (top left) = 7, x (bottom right) = 4  y (bottom right) = 8. Perimeter = 26.0. Color is red
+Circle: (center) x = 9  y = -7, r = -5. Perimeter = -31.41592653589793. Color is blue
+Rectangle: x (top left) = 5  y (top left) = 10, x (bottom right) = 3  y (bottom right) = 9. Perimeter = 6.0. Color is green
+Triangle: x1 = 8  y1 = -2, x2 = 9  y2 = 10, x3 = 2  y3 = -6. Perimeter = 36.716946326293254. Color is orange
