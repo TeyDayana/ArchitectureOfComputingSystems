@@ -1,0 +1,6 @@
+Sorted container:
+
+Rectangle: x (top left) = -100  y (top left) = -100, x (bottom right) = 100  y (bottom right) = 100. Perimeter = 800.0. Color is purple
+
+Triangle: x1 = -100  y1 = 100, x2 = 100  y2 = 100, x3 = -100  y3 = -100. Perimeter = 682.842712474619. Color is blue
+Circle: (center) x = 0  y = 0, r = 100. Perimeter = 628.3185307179587. Color is cyan
