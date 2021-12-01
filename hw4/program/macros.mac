@@ -1,0 +1,126 @@
+; macros.mac - макроопределения
+
+; объявление чужеродных функций
+extern  printf
+extern  fprintf
+extern  stdout
+extern  strcmp
+extern  atoi
+extern  time
+extern  srand
+extern  fopen
+extern  fscanf
+extern  fclose
+extern  clock
+extern  CLOCKS_PER_SEC
+
+extern  RandContnr
+extern  PrintCont
+extern  GetContnr
+extern  PerimAv
+
+; вывод строки с переходом на новую
+%macro  PrintStrLn      2   ; многострочный macro с 2-мя аргументами
+    section .data
+        %%arg1  db  %1,10,0   ; аргумент 1
+    section .text
+        mov rdi, %2     ; подготовка к отображению - 2-ой аргумент
+        mov rsi, %%arg1 ; строка для отображения
+        mov rax, 0      ; без плавающей точки
+        call    fprintf ; вызов функции вывода
+%endmacro
+
+; вывод строки из буфера
+%macro  PrintStrData    2   ; многострочный macro с 2-мя аргументами
+    section .text
+        mov rdi, %2     ; подготовка к отображению
+        mov rsi, %1     ; строка для отображения
+        xor rax, rax    ; очистка rax
+        call    fprintf ; вызов функции вывода
+%endmacro
+
+; вывод строки
+%macro  PrintStr        2
+    section .data
+        %%arg1  db  %1, 0   ; аргумент 1
+    section .text
+        mov rdi, %2
+        mov rsi, %%arg1
+        mov rax, 0  ; без плавающей точки
+        call    fprintf
+%endmacro
+
+; вывод целого числа
+%macro  PrintInt        2
+    section .data
+        %%arg1  db  "%d", 0
+    section .text
+        mov     rdi, %2
+        mov     rsi, %%arg1
+        mov     rdx, %1
+        mov     rax, 0
+        call    fprintf
+%endmacro
+
+; вывод контейнера
+%macro  PrintContnr     3
+    mov     rdi, %1
+    mov     esi, %2
+    mov     rdx, %3
+    mov     rax, 0
+    call    PrintCont
+%endmacro
+
+%macro  PrintSorted     3
+    mov     rdi, %1
+    mov     esi, %2
+    mov     rdx, %3
+    mov     rax, 0
+    call    PrintSort
+%endmacro
+
+%macro  FileOp          3
+    section .data
+        %%rw  db  %2,0          
+    section .text               
+        mov     rdi, %1         
+        mov     rsi, %%rw       
+        mov     rax, 0          
+        call    fopen
+        mov     [%3], rax
+%endmacro
+
+%macro  FileCl          1
+    mov     rdi, %1             
+    mov     rax, 0              
+    call    fclose
+%endmacro
+
+%macro  PerimAver       3
+    mov     rdi, %1
+    mov     rsi, %2
+    call    PerimAv
+    movsd   %3, xmm0
+%endmacro
+
+%macro   PrintDouble     2
+    section .data
+        %%arg1  db  "%g",0
+    section .text               
+        mov     rdi, %2
+        mov     rsi, %%arg1
+        movsd   xmm0, %1
+        mov     rax, 1              
+        call    fprintf
+%endmacro
+
+%macro  PrintLLUns    2
+    section .data
+        %%arg1  db  "%llu",0    ; first argument
+    section .text               ; the printf arguments
+        mov rdi, %2
+        mov rsi, %%arg1
+        mov rdx, %1
+        mov rax, 0              ; no floating point
+        call fprintf
+%endmacro
