@@ -1,0 +1,2 @@
+Average perimeter is 4
+Rectangle: (0, 0) - top left, (1, 1) - bottom right. Perimeter is 4. Color code: 0
