@@ -1,0 +1,5 @@
+Average perimeter is 9.32924
+Rectangle: (-8, 7) - top left, (4, 8) - bottom right. Perimeter is 26. Color code: 0
+Circle: (9, -7) - O, r = -5. Perimeter is -31.4. Color code: 5
+Rectangle: (5, 10) - top left, (3, 9) - bottom right. Perimeter is 6. Color code: 3
+Triangle: (8, -2) - A, (9, 10) - B, (2, -6) - C. Perimeter is 36.7169. Color code: 1
